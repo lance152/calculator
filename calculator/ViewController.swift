@@ -31,6 +31,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func reset() {
+        brain.reset()
+        displayValue = 0
+        isUserInMiddleOfTyping=false
+    }
+    
     @IBAction func appendDigit(sender: UIButton) {
         let digit = sender.currentTitle!
         if isUserInMiddleOfTyping{
